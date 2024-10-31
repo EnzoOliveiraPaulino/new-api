@@ -13,8 +13,6 @@
       <tr>
         <th>ID</th>
         <th>Descrição</th>
-        <th>Ativo</th>
-        <th>Professor ID</th>
         <th>Ações</th>
       </tr>
     </thead>
@@ -23,8 +21,6 @@
       <tr>
         <td>{{ turma.id }}</td>
         <td><a href="{{ url_for('turmas.get_turma', id_turma=turma.id) }}">{{ turma.descricao }}</a></td>
-        <td>{{ turma.ativo }}</td>
-        <td>{{ turma.professor_id }}</td>
         <td>
           <a href="{{ url_for('turmas.editar_turma_page', id_turma=turma.id) }}">Editar</a>
           <form action="{{ url_for('turmas.delete_turma', id_turma=turma.id) }}" method="POST" style="display:inline;">
